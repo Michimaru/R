@@ -1,0 +1,12 @@
+#heatmap data
+mat555 <- AverageExpression(male_10X.n.f.s, features = x)
+mat666 <- mat555$RNA
+
+#heatmap data(modified CSV)
+write.csv(x = mat666, file = “mat666.csv”)
+*CSVでデータ整理を行なって
+
+#pheatmap
+ re <- pheatmap::pheatmap(log2(mat2+1), angle_col = 45, scale = "row", cluster_cols = FALSE, cluster_rows = FALSE, na_col = "#FFFFFF", color = colorRampPalette(c("#0095d9", "white", "red"))(20), border_color=NULL, cellheight = 10, cellwidth = 10)
+ 
+ re <- pheatmap::pheatmap(log2(mat777+1), angle_col = 45, scale = "row", cluster_cols = FALSE, cluster_rows = FALSE, na_col = "#FFFFFF", color = colorRampPalette(c("#0095d9", "white", "red"))(20), border_color='white', cellheight = 10, cellwidth = 10)
